@@ -63,8 +63,7 @@ viRNAtrap-bacteria extands virnateap to generate predicted viral and bacterial c
 ### virnatrap.py: 
 	Purpose: Run the contig-generation pipeline. Processes all FASTQs in a directory and writes contigs for each to a seperate file in an output directory, except that FASTQs with an existing output file in that directory are skipped. 
 	Dependencies: multiprocessing, numpy, ctypes, TensorFlow/Keras. Requires src/assemble_read_c.c to be compiled into src/assemble_read_c.so. 
-	Arguments: Run python virnatrap.py -h for details. Requires an input directory of FASTQs, an output directory, and a model to load. Optional (with defaults) are an expected read length and a number of threads to use.
-Common, built-in dependencies (e.g., sys) are omitted.
+	Arguments: Run python virnatrap.py -h for details. Requires an input directory of FASTQs, an output directory, and a model to load. Optional (with defaults) are an expected read length and a number of threads to use. Common, built-in dependencies (e.g., sys) are omitted.
 
-R scripts:
+### R scripts:
 plot_fig3.R: Used to generate Fig. 3A
