@@ -23,15 +23,15 @@ def metrics(labels, preds):
     print(confusion_matrix(labels.argmax(axis=1), preds.argmax(axis=1)))
 
 
-valid_x, valid_y = load_data(sys.argv[2])
-model = load_model(sys.argv[1])
+valid_x, valid_y = load_data(sys.argv[2]) #load_data("validation_all_76bp.npz")
+model = load_model(sys.argv[1]) #load_model("final_model_2")
 
-#print("Original performance:")
-#ps = model.predict(valid_x)
-#metrics(valid_y, ps)
+print("Original performance:")
+ps = model.predict(valid_x)
+metrics(valid_y, ps)
 
 mut_x = valid_x.copy()
-for k in range(1,4):
+for k in range(1,5):
     for i in range(mut_x.shape[0]):
         j = random.randrange(mut_x.shape[1])
         while mut_x[i][j] != valid_x[i][j]:
